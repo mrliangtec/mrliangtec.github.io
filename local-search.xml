@@ -4,13 +4,54 @@
   
   
   <entry>
+    <title>假期微信小程序实训笔记</title>
+    <link href="/%E5%81%87%E6%9C%9F%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%AE%AD.html"/>
+    <url>/%E5%81%87%E6%9C%9F%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%AE%AD.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="Day1：Git本地环境的搭建，用Git管理项目"><a href="#Day1：Git本地环境的搭建，用Git管理项目" class="headerlink" title="Day1：Git本地环境的搭建，用Git管理项目"></a>Day1：Git本地环境的搭建，用Git管理项目</h2><h3 id="提交代码的正确顺序"><a href="#提交代码的正确顺序" class="headerlink" title="提交代码的正确顺序"></a>提交代码的正确顺序</h3><ol><li>使用<code>git add 文件名.文件后缀</code>将文件添加到本地Git缓存区</li><li>使用<code>git status</code>查看状态</li><li>使用<code>git commit -m &#39;提交说明&#39;</code>将修改推送到本地Git库中</li><li>使用<code>git remote add origin 远程仓库url</code>将本地Git仓库与代码托管平台上的仓库连接</li><li>使用<code>git push -u origin master</code>将本地Git仓库代码推送到代码托管平台（Github，Gitee，Coding等）<br><del>或者直接使用Github Desktop</del></li></ol><h3 id="使用Git将代码提交到Github（完整代码示例）"><a href="#使用Git将代码提交到Github（完整代码示例）" class="headerlink" title="使用Git将代码提交到Github（完整代码示例）"></a>使用Git将代码提交到Github（完整代码示例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ mkdir <span class="hljs-built_in">test</span><br>$ <span class="hljs-built_in">cd</span> <span class="hljs-built_in">test</span><br>$ git init<br>$ touch index.html<br>$ git <span class="hljs-built_in">log</span><br>$ git add index.html<br>$ git status<br>$ git commit -m <span class="hljs-string">&#x27;add index.html&#x27;</span><br>$ git <span class="hljs-built_in">log</span><br>$ git remote add origin 远程仓库url<br>$ git push -u origin master<br></code></pre></td></tr></table></figure><p>说明：</p><ol><li>最后一行中的<code>-u origin master</code>只有第一次提交时才需要添加</li><li>首次执行<code>git push -u origin master</code>时，系统会弹出对话框，这时需要登陆自己的Github账户</li><li>虽然创建项目时Github给出的代码为<code>git push -u origin main</code>，但在实际操作中<code>git push -u origin main</code>会报错，所以需要将<code>main</code>修改为<code>master</code></li><li>提交过程中可能会报错：<code>OpenSSL SSL_read: Connection was reset, errno 10054</code>，解决代码如下：<br><code>git config --global http.sslVerify &quot;false&quot;</code><h3 id="“git-clone”"><a href="#“git-clone”" class="headerlink" title="“git clone”"></a>“git clone”</h3>使用方法：<code>git clone 远程仓库url</code>，回车<br>执行clone之后，执行的目录会出现一个以仓库名为文件夹名的文件夹，里面是clone的远程仓库的文件，以及仓库的连接，不需要上述手动创建，方便快捷。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>学习专区</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>微信小程序</tag>
+      
+      <tag>假期实训</tag>
+      
+      <tag>笔记</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hexo使用教程</title>
     <link href="/hello-world.html"/>
     <url>/hello-world.html</url>
     
-    <content type="html"><![CDATA[<p>关于这个博客：某一日心血来潮，打算试试他们经常说的“Hexo”，于是便有了这个博客。还不太会用，毕竟上手才一两天，就把官方的Page翻译一下吧，感觉这种博客体验虽不如WordPress，Typecho那种完全的图形化界面来的方便，<del>但是也挺好玩的</del>，以后玩明白了可以搬一些文章过来。</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;文章名称&quot;</span><br></code></pre></td></tr></table></figure><p>官网教程: <a href="https://hexo.io/docs/writing.html">点击直达</a></p><h3 id="启动本地Hexo服务"><a href="#启动本地Hexo服务" class="headerlink" title="启动本地Hexo服务"></a>启动本地Hexo服务</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>Hexo的本地调试服务，可以模拟发布之后的效果，适合发布前预览文章整体效果。<br>官网教程: <a href="https://hexo.io/docs/server.html">点击直达</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>写法一：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>写法二：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo g<br></code></pre></td></tr></table></figure><p>两种写法的区别：第二种是第一种的缩写，这两种写法本质上没有任何的区别。<br>官网教程: <a href="https://hexo.io/docs/generating.html">点击直达</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>不知道是干什么的，表示并没有用过。<br>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>关于这个博客：某一日心血来潮，打算试试他们经常说的“Hexo”，于是便有了这个博客。还不太会用，毕竟上手才一两天，就把官方的Page翻译一下吧，感觉这种博客体验虽不如WordPress，Typecho那种完全的图形化界面来的方便，<del>但是也挺好玩的</del>，以后玩明白了可以搬一些文章过来。</p><h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;文章名称&quot;</span><br></code></pre></td></tr></table></figure><p>官网教程: <a href="https://hexo.io/docs/writing.html">点击直达</a></p><h3 id="启动本地Hexo服务"><a href="#启动本地Hexo服务" class="headerlink" title="启动本地Hexo服务"></a>启动本地Hexo服务</h3><p>写法一：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>写法二：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo s<br></code></pre></td></tr></table></figure><p>两种写法的区别：第二种是第一种的缩写，这两种写法本质上没有任何的区别。<br>Hexo的本地调试服务，可以模拟发布之后的效果，适合发布前预览文章整体效果。<br>官网教程: <a href="https://hexo.io/docs/server.html">点击直达</a></p><h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><p>写法一：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>写法二：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo g<br></code></pre></td></tr></table></figure><p>两种写法的区别：第二种是第一种的缩写，这两种写法本质上没有任何的区别。<br>官网教程: <a href="https://hexo.io/docs/generating.html">点击直达</a></p><h3 id="为文章添加标签"><a href="#为文章添加标签" class="headerlink" title="为文章添加标签"></a>为文章添加标签</h3><p>单个标签：<code>tags: 标签内容</code><br>多个标签：<code>tags: [标签1,标签2,标签3]</code></p><h3 id="为文章添加分类"><a href="#为文章添加分类" class="headerlink" title="为文章添加分类"></a>为文章添加分类</h3><p>说明：如果没有分类页面需要添加分类页面！<br><code>categories: 分类内容</code></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>不知道是干什么的，表示并没有用过。<br>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p><h3 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs clean"># 一号标题<br>## 二号标题<br>### 三号标题<br>#### 四号标题<br>##### 五号标题<br>###### 六号标题<br><br>**文字加粗**<br>*文字倾斜*`<br>***文字斜体加粗***<br>~~文字中划线（删除线）~~<br><br>---：分割线<br>***：分割线<br><br>![图片alt](图片地址 <span class="hljs-string">&quot;图片title&quot;</span>)：插入图片<br>注意：Markdown中的图片alt显示在图片的下方<br>[超链接名](超链接地址 <span class="hljs-string">&quot;超链接title&quot;</span>)：插入链接<br><br>+ 列表内容：无序列表<br>- 列表内容：无序列表<br>* 列表内容：无序列表<br>注意：符号和内容之间有一个空格（这和加粗倾斜不同，加粗倾斜符号和文本之间没有空格）<br><span class="hljs-number">1.</span> 列表内容：有序列表<br>注意：序号和内容之间有一个空格（用法同无序列表）<br><br>表格：<br>表头|表头|表头<br>---|:--:|---:<br>内容|内容|内容<br>内容|内容|内容<br>第二行用于分割表头和内容<br>文字默认居左<br>-两边加：表示文字居中<br>-右边加：表示文字居右<br><br>`代码内容`：行间代码<br><br>块级代码：<br>(```)<br>代码内容<br>代码内容<br>(```)<br>说明：前面和后面多加了小括号，实际使用时需要去掉<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>Hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo 使用教程</tag>
+      
+    </tags>
     
   </entry>
   
