@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      803 字
+      1.1k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      14
        分钟
     </span>
   
@@ -251,15 +251,39 @@
 </ol>
 <h2 id="Day2：CSS（复习-）"><a href="#Day2：CSS（复习-）" class="headerlink" title="Day2：CSS（复习?）"></a>Day2：CSS（复习?）</h2><h3 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h3><p>前端三大核心技术：Html，CSS，JavaScript（EcmaScript，DOM，BOM）<br>JavaScript：全球唯一一门真正意义上的全栈开发语言（Java是后端语言）<br>Html负责网页的结构，CSS负责网页的美化，JavaScript负责网页的特效。</p>
 <h3 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h3><p>CSS：层叠样式表（层叠：样式可以覆盖），英文全称Cascading Style Sheets<br>CSS作用：用来定义如何来显示Html元素<br>通常样式是存储在样式表中（外部CSS文件引入），CSS文件后缀：<code>.css</code></p>
-<h3 id="CSS三种引入方式"><a href="#CSS三种引入方式" class="headerlink" title="CSS三种引入方式"></a>CSS三种引入方式</h3><ol>
+<h3 id="CSS三种引入方式"><a href="#CSS三种引入方式" class="headerlink" title="CSS三种引入方式"></a>CSS三种引入方式</h3><ul>
 <li>行间CSS（内联样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100px; height: 100px; background-color: red;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 <li>页面级CSS（内部样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">    * &#123;</span><br><span class="css">        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;</span><br><span class="css">        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
 <li>外部CSS文件引入（外部样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;index.css&quot;</span>&gt;</span><br><span class="hljs-comment">&lt;!-- 同级目录还可以写为：./index.css --&gt;</span><br></code></pre></td></tr></table></figure></li>
-</ol>
+</ul>
 <p>优先级：行间样式 &gt; 内部样式 &gt; 外部样式</p>
 <h3 id="CSS注释写法"><a href="#CSS注释写法" class="headerlink" title="CSS注释写法"></a>CSS注释写法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 注释内容 */</span><br></code></pre></td></tr></table></figure>
 
 <h3 id="CSS基本语法"><a href="#CSS基本语法" class="headerlink" title="CSS基本语法"></a>CSS基本语法</h3><p>CSS语法由两个部分组成：选择器，一条或多条声明。<br>选择器：告诉CSS找到元素的方式。<br>声明：写在<code>&#123;&#125;</code>中。每个声明由一个属性和一个值组成，二者之间用<code>:</code>隔开，多个声明是由<code>;</code>分开。</p>
+<h3 id="CSS简单选择器（中的3个）"><a href="#CSS简单选择器（中的3个）" class="headerlink" title="CSS简单选择器（中的3个）"></a>CSS简单选择器（中的3个）</h3><ul>
+<li><p>标签选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">div</span> &#123;<br>    <span class="hljs-attribute">color</span>: red;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>类选择器（class选择器）<br>Html：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;main&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>CSS：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.main</span> &#123;<br>    <span class="hljs-attribute">color</span>: green;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>类选择器可以给多个标签使用</p>
+</li>
+<li><p>id选择器<br>Html：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;main0&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<p>CSS：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#main0</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>id选择器具有唯一性：一个页面一个id只能对应一个元素<br>权重：id选择器 &gt; 类选择器</p>
+</li>
+</ul>
+<h3 id="CSS常见样式"><a href="#CSS常见样式" class="headerlink" title="CSS常见样式"></a>CSS常见样式</h3><ul>
+<li><p>CSS文本样式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span> &#123;<br>    <span class="hljs-attribute">text-align</span>: center; <span class="hljs-comment">/* 文本对齐方式 */</span><br>    <span class="hljs-attribute">text-indent</span>: <span class="hljs-number">100px</span>;  <span class="hljs-comment">/* 首行缩进 */</span><br>    <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> red;  <span class="hljs-comment">/* 文本阴影，四个值依次为：水平阴影的位置，垂直阴影的位置，模糊的距离（模糊程度，可以不写），颜色；阴影允许有多条，多条阴影之间用＇，＇隔开 */</span><br>    <span class="hljs-attribute">text-shadow</span>: -<span class="hljs-number">1px</span> -<span class="hljs-number">1px</span> <span class="hljs-number">#000</span>,  /* 多条效果写法（文字凹入效果） */<br>                 <span class="hljs-number">1px</span> <span class="hljs-number">1px</span> <span class="hljs-number">#fff</span>;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li><p>CSS颜色写法</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">body</span> &#123;<br>    <span class="hljs-attribute">color</span>: red; <span class="hljs-comment">/* 颜色名 */</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>; <span class="hljs-comment">/* 十六进制值 */</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#424242</span>; <span class="hljs-comment">/* 十六进制值 */</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgb</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>); <span class="hljs-comment">/* rgb值 */</span><br>    <span class="hljs-attribute">color</span>: <span class="hljs-built_in">rgba</span>(<span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0.7</span>); <span class="hljs-comment">/* rgba值 */</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<p>十六进制值：每两位相同的可以省略一位，比如<code>#ffffff</code>可以简写为<code>#fff</code><br>rgb值：0 ~ 255之间<br>rgba值：0 ~ 255之间，a：透明度</p>
+</li>
+</ul>
 
             </div>
             <hr>
