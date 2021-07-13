@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      436 字
+      803 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      5
+      10
        分钟
     </span>
   
@@ -228,21 +228,38 @@
             <h1 style="display: none">假期微信小程序实训笔记</h1>
             
             <div class="markdown-body">
-              <h2 id="Day1：Git本地环境的搭建，用Git管理项目"><a href="#Day1：Git本地环境的搭建，用Git管理项目" class="headerlink" title="Day1：Git本地环境的搭建，用Git管理项目"></a>Day1：Git本地环境的搭建，用Git管理项目</h2><h3 id="提交代码的正确顺序"><a href="#提交代码的正确顺序" class="headerlink" title="提交代码的正确顺序"></a>提交代码的正确顺序</h3><ol>
+              <h2 id="Day1：Git本地环境的搭建，用Git管理项目"><a href="#Day1：Git本地环境的搭建，用Git管理项目" class="headerlink" title="Day1：Git本地环境的搭建，用Git管理项目"></a>Day1：Git本地环境的搭建，用Git管理项目</h2><h3 id="1-提交代码的正确顺序"><a href="#1-提交代码的正确顺序" class="headerlink" title="1. 提交代码的正确顺序"></a>1. 提交代码的正确顺序</h3><ol>
 <li>使用<code>git add 文件名.文件后缀</code>将文件添加到本地Git缓存区</li>
 <li>使用<code>git status</code>查看状态</li>
 <li>使用<code>git commit -m &#39;提交说明&#39;</code>将修改推送到本地Git库中</li>
 <li>使用<code>git remote add origin 远程仓库url</code>将本地Git仓库与代码托管平台上的仓库连接</li>
-<li>使用<code>git push -u origin master</code>将本地Git仓库代码推送到代码托管平台（Github，Gitee，Coding等）<br><del>或者直接使用Github Desktop</del></li>
+<li>使用<code>git push -u origin master</code>将本地Git仓库代码推送到代码托管平台（Github，Gitee，Coding等）</li>
 </ol>
-<h3 id="使用Git将代码提交到Github（完整代码示例）"><a href="#使用Git将代码提交到Github（完整代码示例）" class="headerlink" title="使用Git将代码提交到Github（完整代码示例）"></a>使用Git将代码提交到Github（完整代码示例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ mkdir <span class="hljs-built_in">test</span><br>$ <span class="hljs-built_in">cd</span> <span class="hljs-built_in">test</span><br>$ git init<br>$ touch index.html<br>$ git <span class="hljs-built_in">log</span><br>$ git add index.html<br>$ git status<br>$ git commit -m <span class="hljs-string">&#x27;add index.html&#x27;</span><br>$ git <span class="hljs-built_in">log</span><br>$ git remote add origin 远程仓库url<br>$ git push -u origin master<br></code></pre></td></tr></table></figure>
+<p><del>或者直接使用Github Desktop</del></p>
+<h3 id="2-使用Git将代码提交到Github（完整代码示例）"><a href="#2-使用Git将代码提交到Github（完整代码示例）" class="headerlink" title="2. 使用Git将代码提交到Github（完整代码示例）"></a>2. 使用Git将代码提交到Github（完整代码示例）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ mkdir <span class="hljs-built_in">test</span><br>$ <span class="hljs-built_in">cd</span> <span class="hljs-built_in">test</span><br>$ git init<br>$ touch index.html<br>$ git <span class="hljs-built_in">log</span><br>$ git add index.html<br>$ git status<br>$ git commit -m <span class="hljs-string">&#x27;add index.html&#x27;</span><br>$ git <span class="hljs-built_in">log</span><br>$ git remote add origin 远程仓库url<br>$ git push -u origin master<br></code></pre></td></tr></table></figure>
 <p>说明：</p>
 <ol>
 <li>最后一行中的<code>-u origin master</code>只有第一次提交时才需要添加</li>
 <li>首次执行<code>git push -u origin master</code>时，系统会弹出对话框，这时需要登陆自己的Github账户</li>
 <li>虽然创建项目时Github给出的代码为<code>git push -u origin main</code>，但在实际操作中<code>git push -u origin main</code>会报错，所以需要将<code>main</code>修改为<code>master</code><br><img src="%E5%81%87%E6%9C%9F%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%AE%9E%E8%AE%AD%E7%AC%94%E8%AE%B0/1.png" srcset="https://cdn.jsdelivr.net/gh/mrliangtec/mrliangtec.github.io/img/loading.gif" lazyload alt="两种写法" title="效果比较"></li>
-<li>提交过程中可能会报错：<code>OpenSSL SSL_read: Connection was reset, errno 10054</code>，解决代码如下：<br><code>git config --global http.sslVerify &quot;false&quot;</code><h3 id="“git-clone”"><a href="#“git-clone”" class="headerlink" title="“git clone”"></a>“git clone”</h3>使用方法：<code>git clone 远程仓库url</code>，回车<br>执行clone之后，执行的目录会出现一个以仓库名为文件夹名的文件夹，里面是clone的远程仓库的文件，以及仓库的连接，不需要上述手动创建，方便快捷。<br>使用时，为了少给自己挖坑，为了避免冲突，使用git的时候，一定养成一个好习惯，先pull，再push。</li>
+<li>提交过程中可能会报错：<code>OpenSSL SSL_read: Connection was reset, errno 10054</code>，解决代码如下：<br><code>git config --global http.sslVerify &quot;false&quot;</code></li>
 </ol>
+<h3 id="3-“git-clone”"><a href="#3-“git-clone”" class="headerlink" title="3. “git clone”"></a>3. “git clone”</h3><p>使用方法：<code>git clone 远程仓库url</code>，回车<br>执行clone之后，执行的目录会出现一个以仓库名为文件夹名的文件夹，里面是clone的远程仓库的文件，以及仓库的连接，不需要上述手动创建，方便快捷。<br>使用时，为了少给自己挖坑，为了避免冲突，使用git的时候，一定养成一个好习惯，先pull，再push。</p>
+<h3 id="4-作业"><a href="#4-作业" class="headerlink" title="4. 作业"></a>4. 作业</h3><ol>
+<li>注册Github账号，并把注册邮箱发给同时@老师。（状态：已完成。）</li>
+<li>下载安装Visual Studio Code编辑器 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/">vscode官网</a> 。（状态：已完成。）</li>
+</ol>
+<h2 id="Day2：CSS（复习-）"><a href="#Day2：CSS（复习-）" class="headerlink" title="Day2：CSS（复习?）"></a>Day2：CSS（复习?）</h2><h3 id="前端技术"><a href="#前端技术" class="headerlink" title="前端技术"></a>前端技术</h3><p>前端三大核心技术：Html，CSS，JavaScript（EcmaScript，DOM，BOM）<br>JavaScript：全球唯一一门真正意义上的全栈开发语言（Java是后端语言）<br>Html负责网页的结构，CSS负责网页的美化，JavaScript负责网页的特效。</p>
+<h3 id="CSS简介"><a href="#CSS简介" class="headerlink" title="CSS简介"></a>CSS简介</h3><p>CSS：层叠样式表（层叠：样式可以覆盖），英文全称Cascading Style Sheets<br>CSS作用：用来定义如何来显示Html元素<br>通常样式是存储在样式表中（外部CSS文件引入），CSS文件后缀：<code>.css</code></p>
+<h3 id="CSS三种引入方式"><a href="#CSS三种引入方式" class="headerlink" title="CSS三种引入方式"></a>CSS三种引入方式</h3><ol>
+<li>行间CSS（内联样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 100px; height: 100px; background-color: red;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li>页面级CSS（内部样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"></span><br><span class="css">    * &#123;</span><br><span class="css">        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;</span><br><span class="css">        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;</span><br><span class="css">    &#125;</span><br><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span><br></code></pre></td></tr></table></figure></li>
+<li>外部CSS文件引入（外部样式）<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;index.css&quot;</span>&gt;</span><br><span class="hljs-comment">&lt;!-- 同级目录还可以写为：./index.css --&gt;</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>优先级：行间样式 &gt; 内部样式 &gt; 外部样式</p>
+<h3 id="CSS注释写法"><a href="#CSS注释写法" class="headerlink" title="CSS注释写法"></a>CSS注释写法</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 注释内容 */</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="CSS基本语法"><a href="#CSS基本语法" class="headerlink" title="CSS基本语法"></a>CSS基本语法</h3><p>CSS语法由两个部分组成：选择器，一条或多条声明。<br>选择器：告诉CSS找到元素的方式。<br>声明：写在<code>&#123;&#125;</code>中。每个声明由一个属性和一个值组成，二者之间用<code>:</code>隔开，多个声明是由<code>;</code>分开。</p>
 
             </div>
             <hr>
