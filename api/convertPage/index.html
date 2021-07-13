@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github文件加速工具 - 梁先生哎</title>
+    <link rel="shortcut icon" href="https://liangxiansheng688.com.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://blog.liangxiansheng688.com.cn/wp-content/themes/Origami/live2d-widget/autoload.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="title">GitHub文件快速添加jsDeliver加速服务</div>
+    <form action="" class="main">
+        <p>
+            <span>作者</span>：<input type="text" name="author" id="author">
+        </p>
+        <p>
+            <span>项目名：</span><input type="text" name="devName" id="devName">
+        </p>
+        <p>
+            <span>文件名：</span><input type="text" name="file" id="file">
+        </p>
+        <p>
+            <input type="button" name="转换" id="" value="点击转换" onclick="convert();">
+        </p>
+    </form>
+
+    <div class="way">
+        <span>使用教程：</span> <br>
+        <img src="img/1.png" alt="demoDisplay" class="demoDisplay">
+        <div class="wayMain">如图所示是一个Github文件，我们需要它的<strong>作者</strong>，<strong>项目名</strong>，<strong>文件路径</strong>，这些都可以从途中轻而易举地获得。比如：
+            <div>
+                <strong>作者：</strong>jquery，位于左上角书本图标的右面
+            </div>
+            <div>
+                <strong>项目名：</strong>jquery，位于左上角作者的后面
+            </div>
+            <div>
+                即 <strong>左上角的结构</strong>为：作者 / 项目名
+                <img src="img/2.png" alt="">
+            </div>
+            <div>
+                <strong>文件路径：</strong>package.json，位于左上角结构行稍下一点的蓝色jquery后面的内容
+                <img src="img/3.png" alt="">
+            </div>
+            <div>
+                当我们要加速的文件在文件夹中时，文件路径仍然为蓝色字（项目名）后面的内容，比如
+                <img src="img/4.png" alt="">，这种情况时，我们的文件路径就是：test/jquery.js
+            </div>
+            <div>
+                记录下这些值，对应填入上面的框框中，点击转换即可生成经过jsDeliver加速的文件啦！下面是填写样例：
+            </div>
+            <div>
+                文件在项目仓库根目录：<img src="img/5.png" alt="">
+            </div>
+            <div>
+                文件在项目仓库文件夹中：<img src="img/6.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        $.get("https://v1.hitokoto.cn/", function(data, status) {
+            if (status == 'success') {
+                $('.hitokoto').text(data.hitokoto + '  -  ' + data.from);
+            } else {
+                $('.hitokoto').text('获取出错！');
+            }
+        });
+    </script>
+    <div class='hitokoto' id="yy" onclick="javascript:location.reload();"></div>
+
+    <div class="tj">
+        <div class="doudong">(●･◡･●)ﾉ♥</div><br> Copyright&copy;&nbsp;2020 - 现在&nbsp;
+        <a href="https://liangxiansheng688.com.cn/mainPage/contact.html" style="color: #000;">Mr.Liang</a>&nbsp;All Rights Reserved. <br>
+        <a href="https://liangxiansheng688.com.cn" target="_blank" style="color: #000;">个人主页</a>&nbsp;<a href="https://blog.liangxiansheng688.com.cn" target="_blank" style="color: #000;">个人博客</a>&nbsp;<a href="https://もうすぐ秋です.com" target="_blank" style="color: #000;">个人博客</a>
+    </div>
+
+    <script>
+        function convert() {
+            var author = document.getElementById('author').value;
+            var devName = document.getElementById('devName').value;
+            var file = document.getElementById('file').value;
+            if (author == '' || devName == '' || file == '') {
+                alert('请将信息填写完整！');
+            } else {
+                alert('https://cdn.jsdelivr.net/gh/' + author + '/' + devName + '/' + file);
+            }
+        }
+    </script>
+</body>
+
+</html>
