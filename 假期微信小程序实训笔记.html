@@ -199,7 +199,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      50
+      51
        分钟
     </span>
   
@@ -232,7 +232,8 @@
             <h1 style="display: none">假期微信小程序实训笔记</h1>
             
             <div class="markdown-body">
-              <h2 id="Day1：Git本地环境的搭建，用Git管理项目"><a href="#Day1：Git本地环境的搭建，用Git管理项目" class="headerlink" title="Day1：Git本地环境的搭建，用Git管理项目"></a>Day1：Git本地环境的搭建，用Git管理项目</h2><h3 id="1-提交代码的正确顺序"><a href="#1-提交代码的正确顺序" class="headerlink" title="1. 提交代码的正确顺序"></a>1. 提交代码的正确顺序</h3><ol>
+              <p>笔记为微信小程序实训记录</p>
+<h2 id="Day1：Git本地环境的搭建，用Git管理项目"><a href="#Day1：Git本地环境的搭建，用Git管理项目" class="headerlink" title="Day1：Git本地环境的搭建，用Git管理项目"></a>Day1：Git本地环境的搭建，用Git管理项目</h2><h3 id="1-提交代码的正确顺序"><a href="#1-提交代码的正确顺序" class="headerlink" title="1. 提交代码的正确顺序"></a>1. 提交代码的正确顺序</h3><ol>
 <li>使用<code>git add 文件名.文件后缀</code>将文件添加到本地Git缓存区</li>
 <li>使用<code>git status</code>查看状态</li>
 <li>使用<code>git commit -m &#39;提交说明&#39;</code>将修改推送到本地Git库中</li>
@@ -361,7 +362,7 @@
 <p>CSS代码：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.six-face</span> &#123;<br>    <span class="hljs-attribute">display</span>: flex;<br>    <span class="hljs-attribute">justify-content</span>: space-between;<br>&#125;<br><br><span class="hljs-selector-class">.six-face</span> <span class="hljs-selector-class">.column</span> &#123;<br>    <span class="hljs-attribute">display</span>: flex;<br>    <span class="hljs-attribute">flex-direction</span>: column;<br>    <span class="hljs-attribute">justify-content</span>: space-between;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h2 id="Day4：NPM，ES6基础"><a href="#Day4：NPM，ES6基础" class="headerlink" title="Day4：NPM，ES6基础"></a>Day4：NPM，ES6基础</h2><h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>Node.js：运行在服务器端的JavaScript<br>NPM：Node.js包管理器，随同Node一起安装。NPM已经成了Node包的标准发布平台，用于Node包的发布、传播、依赖控制。NPM提供命令行工具，可以方便我们下载、安装、升级、删除包，也可以让你作为一个开发者发布并维护自己的包。</p>
+<h2 id="Day4：NPM"><a href="#Day4：NPM" class="headerlink" title="Day4：NPM"></a>Day4：NPM</h2><h3 id="NPM"><a href="#NPM" class="headerlink" title="NPM"></a>NPM</h3><h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>Node.js：运行在服务器端的JavaScript<br>NPM：Node.js包管理器，随同Node一起安装。NPM已经成了Node包的标准发布平台，用于Node包的发布、传播、依赖控制。NPM提供命令行工具，可以方便我们下载、安装、升级、删除包，也可以让你作为一个开发者发布并维护自己的包。</p>
 <h4 id="使用NPM安装Moment"><a href="#使用NPM安装Moment" class="headerlink" title="使用NPM安装Moment"></a>使用NPM安装Moment</h4><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">$ npm <span class="hljs-keyword">install</span> moment -s<br></code></pre></td></tr></table></figure>
 
 <h4 id="Node-js使用外部包"><a href="#Node-js使用外部包" class="headerlink" title="Node.js使用外部包"></a>Node.js使用外部包</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">const</span> moment = <span class="hljs-built_in">require</span>(<span class="hljs-string">&#x27;moment&#x27;</span>); <span class="hljs-comment">// 将包导入进来</span><br><span class="hljs-keyword">const</span> currentDate = moment().format(<span class="hljs-string">&#x27;YYYY-MM-DD hh:mm:ss&#x27;</span>);<br><span class="hljs-built_in">console</span>.log(currentDate);<br></code></pre></td></tr></table></figure>
@@ -398,6 +399,10 @@
 </ol>
 <p><del>真就“熟悉各种模块的安装于卸载呗就”</del></p>
 <h3 id="package-json-文件详解"><a href="#package-json-文件详解" class="headerlink" title="package.json 文件详解"></a>package.json 文件详解</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs js">name                <span class="hljs-comment">// 包名</span><br>version             <span class="hljs-comment">// 包版本号</span><br>description         <span class="hljs-comment">// 包描述</span><br>homepage            <span class="hljs-comment">// 包官网url</span><br>author              <span class="hljs-comment">// 包作者名</span><br>contributors        <span class="hljs-comment">// 包其他贡献者名</span><br>repository          <span class="hljs-comment">// 包代码存放位置的类型（git，svn等）</span><br>dependencies        <span class="hljs-comment">// 依赖包列表（生产环境依赖，即上线后）</span><br>devDependencies     <span class="hljs-comment">// 依赖包列表（开发环境依赖）</span><br>main                <span class="hljs-comment">// 程序主入口文件，使用require(&#x27;moduleName&#x27;)加载，一般为模块根目录下的index.js</span><br>keywords            <span class="hljs-comment">// 关键字</span><br><span class="hljs-comment">// 版本号：</span><br><span class="hljs-comment">// 5.0.3：安装版本为5.0.3</span><br><span class="hljs-comment">// ~5.0.3：安装版本为5.0.?中的最新版本</span><br><span class="hljs-comment">// ^5.0.3：安装版本为5.?.?中的最新版本</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="Day5：JavaScript"><a href="#Day5：JavaScript" class="headerlink" title="Day5：JavaScript"></a>Day5：JavaScript</h2><h3 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-built_in">console</span>.log(<span class="hljs-string">&#x27;hello world&#x27;</span>);<br>alert(<span class="hljs-string">&#x27;hello world&#x27;</span>);<br></code></pre></td></tr></table></figure>
+<p><del>彳亍 入门了嗷</del></p>
+
             </div>
             <hr>
             <div>
